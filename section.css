@@ -75,3 +75,48 @@ section::before {
         inset: 7px 429px;
     }
 }
+
+@media (max-width: 1600px) {
+    section::before {
+        inset: -20px 175px;
+    }
+}
+
+@media (max-width: 990px) {
+    section {
+        width: 400px;
+        height: 250px;
+    }
+    section::before {
+        inset: -15px 155px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 840px) {
+    section {
+        width: 350px;
+        height: 250px;
+    }
+    section::before {
+        inset: -13px 140px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 760px) {
+    section{
+        width: 250px;
+        height: 400px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 60px 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    section::before {
+        margin-left: 10px;
+        inset: -13px 90px;
+        font-size: 11px;
+    }
+}

@@ -56,7 +56,7 @@ main{
     justify-content: center;
     align-items: center;
     padding-top: 40px;
-    font-family: Jost;
+    font-family: Smoothy;
     font-weight: 350;
     color: #a29a9a;
     text-shadow: 0px -1px 1px #7a7a7a45;
@@ -109,15 +109,14 @@ main{
 .conteudo {
     position: absolute;
     border-radius: 50%;
-    inset: 7px;
+    inset: 5px;
     background-color: #fff;
     z-index: 2;
 }
 
 #icon{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    max-height: 90px;
 }
 
 
@@ -129,20 +128,15 @@ main{
 
 .div2 a {
     color: #a29a9a;
-    font-family: Smoothy;
-    font-size: 14px;
+    font-family: Jost;
+    font-size: 12px;
+    font-weight: 300;
     display: block;
 }
 
 .div2 a:hover{
     text-shadow: 0px 0px 4px rgba(117, 114, 114, 0.700);
     transition: 0.5s;
-}
-
-.div3 { grid-area: 1 / 2 / 3 / 3; }
-
-#icon{
-    max-height: 90px;
 }
 
 @keyframes rotate {
@@ -172,6 +166,7 @@ main{
 }
 
 .div3 {
+    grid-area: 1 / 2 / 3 / 3; 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
@@ -233,9 +228,6 @@ main{
 }
 
 @media (max-width: 1600px) {
-    main {
-        height: 484px;
-    }
     .div1::after {
         height: 220px;
     }
@@ -243,6 +235,133 @@ main{
         font-size: 12px;
     }
 }
+
+@media (max-width: 990px){
+    #aboutme, #education {
+        height: 45px;
+        width: 180px;
+        font-size: 9px;
+    }
+    .div1::after {
+        inset: 27px 185px;
+        height: 205px; 
+    }
+    #aboutme p::before, #education p::before {
+        font-size: 13px;
+        inset: -9px -6px;
+    }
+    #aboutme p, #education p {
+        line-height: 7px;
+        word-spacing: 0px;
+        margin-top: 2px;
+    }
+    .div1 p{
+        font-size: 12px;
+        margin-left: 2px;
+    }
+    .box {
+        width: 90px;
+        height: 90px;
+    }
+    #icon {
+        max-height: 80px;
+    }
+    .div2 a {
+        font-size: 10px;
+    } 
+}
+
+@media (max-width: 840px){
+    #aboutme, #education {
+        height: 40px;
+        width: 150px;
+        font-size: 8px;
+    }
+    .div1::after {
+        inset: 33px 165px;
+        height: 200px; 
+    }
+    #aboutme p::before, #education p::before {
+        font-size: 11px;
+        inset: -10px -6px;
+    }
+    #aboutme p, #education p {
+        line-height: 6px;
+        word-spacing: 0px;
+    }
+    .div1 p{
+        font-size: 11px;
+        margin-left: 1px;
+    }
+    .box {
+        width: 80px;
+        height: 80px;
+    }
+    #icon {
+        max-height: 70px;
+    }
+    .div2 a {
+        font-size: 9px;
+    } 
+}
+
+@media (max-width: 760px){
+    .div1 {
+        grid-area: 1 / 1 / 2 / 2; 
+        padding-top: 10px;
+    }
+    .div2 {
+        grid-area: 2 / 1 / 3 / 2; 
+    }
+    .div3{
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    #aboutme, #education {
+        height: 40px;
+        width: 150px;
+        font-size: 7px;
+    }
+    .div1::after {
+        inset: 135px 25px;
+        width: 200px;
+        height: 1px; 
+    }
+    .div1::before{
+        content: "";
+        position: absolute;
+        inset: 185px 25px;
+        width: 200px;
+        height: 1px; 
+        background-color: #a86fd838;
+        border-radius: 50%;
+        z-index: 2;
+    }
+    #aboutme p::before, #education p::before {
+        font-size: 11px;
+        inset: -9px -6px;
+    }
+    #aboutme p, #education p {
+        line-height: 7px;
+        word-spacing: 0px;
+        margin-top: 2px;
+    }
+    .div1 p{
+        font-size: 11px;
+        margin-left: 10px;
+    }
+    .box {
+        width: 90px;
+        height: 90px;
+    }
+    #icon {
+        max-height: 80px;
+    }
+    .div2 a {
+        font-size: 8px;
+    } 
+}
+
+
 
 
 
