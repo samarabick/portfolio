@@ -1,0 +1,77 @@
+section{
+    background-color: #f8f5f5;
+    height: 300px;
+    width: 450px;
+    scale: 2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #9068ee80;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: relative;
+}
+
+section::before {
+    font-family: Smoothy;
+    color: #ffffff;
+    text-shadow: 0px -1px 2px #ffffffa1;
+    inset: -20px 185px;
+    content: "Hello World!";
+    position: absolute;
+}
+
+.star1, .star2, .star3, .star4, .star5, .star6 {
+    position: absolute;
+    width: 10px;
+    animation: fadeout 3.5s infinite;
+}
+
+.star1{
+    inset: 279px 12px;
+}
+
+.star2 {
+    inset: 279px 25px;
+}
+
+.star3 {
+    inset: 279px 38px;
+}
+
+.star4{
+    inset: 10px 399px;
+}
+
+.star5{
+    inset: 10px 412px;
+}
+
+.star6{
+    inset: 10px 425px;
+}
+
+@media (max-width: 1600px){
+    section {
+        height: 260px
+    }
+    .star1 {
+        inset: 242px 12px;
+    }
+    .star2 {
+        inset: 242px 25px;
+    }
+    .star3 {
+        inset: 242px 38px;
+    }
+    .star4 {
+        inset: 7px 403px;
+    }
+    .star5 {
+        inset: 7px 416px;
+    }
+    .star6 {
+        inset: 7px 429px;
+    }
+}

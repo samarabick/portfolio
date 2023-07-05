@@ -1,0 +1,249 @@
+@import url(section.css);
+
+@font-face {
+    font-family: "Smoothy";
+    src: local(Smoothy), url(fonte/Smoothy.ttf);
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url(fonte/Jost.ttf);
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 300px;
+}
+
+#imgheader {
+    min-width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #d8d1d1;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p, h1, span {
+    margin: 0;
+}
+
+main{
+    height: 669px;
+    min-width: 100%;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.div1 { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    font-family: Jost;
+    font-weight: 350;
+    color: #a29a9a;
+    text-shadow: 0px -1px 1px #7a7a7a45;
+    position: relative;
+}
+
+.div1 p{
+    display: block;
+    font-size: 14px;
+    margin-left: 4px;
+}
+
+.div1::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 260px;
+    inset: 20px 210px;
+    background-color: #a86fd838;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.box{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f8f5f5;
+    overflow: hidden;
+}
+
+.box::before{
+    content: "";
+    position: absolute;
+    inset: -5px 35px;
+    background: linear-gradient(315deg, #a86fd8, #e4bfe8);
+    animation: rotate 4s linear infinite;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background-color: #f8f5f5;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.conteudo {
+    position: absolute;
+    border-radius: 50%;
+    inset: 7px;
+    background-color: #fff;
+    z-index: 2;
+}
+
+#icon{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.div2 { 
+    grid-area: 2 / 1 / 3 / 2; 
+    text-align: center;
+    margin-top: 5px;
+}
+
+.div2 a {
+    color: #a29a9a;
+    font-family: Smoothy;
+    font-size: 14px;
+    display: block;
+}
+
+.div2 a:hover{
+    text-shadow: 0px 0px 4px rgba(117, 114, 114, 0.700);
+    transition: 0.5s;
+}
+
+.div3 { grid-area: 1 / 2 / 3 / 3; }
+
+#icon{
+    max-height: 90px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.box:hover::before{
+    inset: -7px 0px;
+    transition: 0.3s;
+}
+
+@keyframes fadeout{
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.div3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+#aboutme, #education {
+    justify-self: center;
+    padding: 4px;
+    height: 55px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    font-family: "Jost";
+    font-weight: 350;
+    font-size: 10px;
+    color: #7f7676;
+}
+
+#aboutme p, #education p {
+    margin-left: 5px;
+    margin-right: 5px;
+    line-height: 10px;
+    word-spacing: 0.5px;
+    text-align: start;
+    position: relative;
+}
+
+#aboutme {
+    grid-area: 1 / 1 / 2 / 2; 
+    margin-top: 20px;
+    align-self: end;
+}
+
+#education {
+    grid-area: 2 / 1 / 3 / 2;
+    margin-top: 20px;
+    align-self: start;
+}
+
+#aboutme p::before, #education p::before {
+    font-family: Smoothy;
+    font-size: 15px;
+    color: #a86fd8;
+    text-shadow: 0px 0px 2px #999999;
+    position: absolute;
+    z-index: 1;
+}
+
+#aboutme p::before{
+    inset: -9px -4px;
+    content: "Sobre mim";
+}
+
+#education p::before{
+    inset: -9px -4px;
+    content: "Formação";
+}
+
+@media (max-width: 1600px) {
+    main {
+        height: 484px;
+    }
+    .div1::after {
+        height: 220px;
+    }
+    .div2 a {
+        font-size: 12px;
+    }
+}
+
+
+
+
